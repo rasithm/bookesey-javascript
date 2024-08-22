@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>projict</title>
+    </head>
+    <body>
+        <h1>Guess the number from 1 to 10</h1>
+        <input id="guessnumber">
+        <button onclick="check()">check</button>
+        <p id="result">your are wrong/right</p>
+        <p id="ras">score:10</p>
+        <script>
+            var guessnumber = document.getElementById("guessnumber")
+            var result = document.getElementById("result")
+            var randomnumber = Math.floor(Math.random()*10)+1
+            var score=document.getElementById("ras")
+            var totalscore=10
+            function check()
+            {
+                var enternumber=guessnumber.value
+                if(enternumber==randomnumber)
+                {
+                    console.log("you are right")
+                    result.textContent="you are right"
+                    totalscore=totalscore+1
+                    score="score"+totalscore
+                    alert("you are won")
+                }
+                else{
+                    totalscore=totalscore-1
+                    score.textContent="score:"+totalscore
+
+                    console.log("wrong")
+                    result.textContent="wrong"
+
+                }
+            }
+        </script>
+    </body>
+</html>

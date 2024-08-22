@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKKEY</title>
+    <link rel="stylesheet" href="bookesey.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Bookesey</h1>
+    </div>
+    <div class="container">
+        <div class="book-container">
+            <h2 style="color: #FD6569;">RICH DAD POOR DAD</h2>
+            <h5>Robert</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero ex odit modi natus, animi repudiandae quis molestiae veniam similique alias recusandae quod distinctio reprehenderit qui aliquam totam adipisci eligendi dolorum.</p>
+            <button onclick="dal(event)">Delete</button>
+        </div>
+    </div>
+    <div class="popup-overlay">
+
+    </div>
+    <div class="popup-box">
+        <h2>ADD BOOK</h2>
+        <form>
+            <input type="text" placeholder="book title" id="book-title-input">
+            <input type="text" placeholder="book author" id="book-author-input">
+            <textarea placeholder="short Description" id="book-description-input"></textarea>
+            <button id="add-book">ADD</button>
+            <button id="cancel-popup" onclick="del(event)">CANCEL</button>
+        </form>
+    </div>
+    <button class="add-button" id="add-popup-button">+</button>
+
+    <script src="booksey.js"></script>
+</body>
+</html>

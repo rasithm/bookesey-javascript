@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>random game</title>
+    </head>
+    <body>
+        <h1>Guess the number from 1 to 10</h1>
+        <input id="number">
+        <button onclick="check()">check</button>
+        <p id="right">you are right/wrong</p>
+        <p id="score">score:10</p>
+        <script>
+            var number=document.getElementById("number")
+            var right=document.getElementById("right")
+            var score=document.getElementById("score")
+            var randomnumer=Math.floor(Math.random()*10)+1
+            var totalscore=10
+            function check()
+            {
+            
+               var guessnumber=number.Value
+               if(guessnumber==randomnumer)
+               {
+                console.log("right")
+                right.textContent="your right"
+                alert("danger")
+               }
+               else{
+                console.log("wrong")
+                right.textContent="wrong"
+                totalscore=totalscore-1
+                score.textContent="score:"+totalscore
+                
+               }
+
+            }
+        </script>
+    </body>
+</html>
